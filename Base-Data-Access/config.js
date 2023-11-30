@@ -20,7 +20,7 @@ module.exports = class config {
 
 	TMS_REST_DATA_ACCESS_DATABASE_CONNECTIONS = {
 		isDefault: true,
-		databaseURL: "postgresql://postgres-dev:PosTgrEs@23@dev1.baas360.alitasys.com:7000/Task-Management-System-25OCT2023",
-		databaseName: "Task-Management-System-25OCT2023"
+		databaseURL: "postgresql://postgres:admin@123@localhost:5432/Task-Management-System-30OCT2023",
+		databaseName: "Task-Management-System-30OCT2023"
 	};
 };

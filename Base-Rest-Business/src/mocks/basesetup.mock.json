@@ -1,0 +1,9 @@
+{
+    "tms.api.rest.business.basesetup.basesetup.v1": {
+        "data": {
+            
+        },
+        "status": 200,
+        "message": "[MOCK] basesetup has been setup successfully"
+    }
+}

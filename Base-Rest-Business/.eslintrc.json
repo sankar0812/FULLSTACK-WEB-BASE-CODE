@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest":true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+        {
+            "files": [
+                "**/logger.js"
+            ],
+            "rules": {
+                "no-console": ["error", { "allow": ["error"] }]
+            }
+        } 
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+    }
+}

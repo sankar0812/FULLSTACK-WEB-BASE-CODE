@@ -1,0 +1,75 @@
+# CreatedBy    : Nishanth S R
+# CreatedTime  : Nov 02 2023
+# Description  : "This file is used to configure the Client and Remote URL"
+
+http:
+  port: 5009
+admin:
+  port: 9876
+  host: localhost
+
+# Adding all the paths to allow for remote services
+apiEndpoints:
+  TMSRestDataAccessPath:
+    paths:
+      [
+        "/api/rest/tms/dataaccess/1.0.0/*"
+      ]
+  TMSRestBusinessPath:
+    paths:
+      [
+        "/api/rest/tms/business/1.0.0/*"
+      ]
+
+# Adding the host/ port of all the remote services
+serviceEndpoints:
+  TMSRestDataAccessPathURL:
+    url: "http://localhost:3000"
+  TMSRestBusinessPathURL:
+    url: "http://localhost:5005"
+
+# Adding policies
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+  - jwt
+  - request-transformer
+
+# Adding pipelines to all the remote services
+pipelines:
+  TMSRestDataAccessPipeline:
+    apiEndpoints:
+      - TMSRestDataAccessPath
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: TMSRestDataAccessPathURL
+              changeOrigin: true
+  TMSRestBusinessPathPipeline:
+    apiEndpoints:
+      - TMSRestBusinessPath
+    policies:
+      - cors:
+        - action:
+            origin: "*"
+            credentials: true
+      - rate-limit:
+          - action:
+              max: 50
+              windowMs: 1000
+              message: 'Too many requests, please try again later.'
+      - request-transformer:
+          - action:
+              headers:
+                add:
+                  authorization: "'Basic UVAwMTkyOTIzMjMyTEQ6OTI3TkJHSkowMjgzSEtBNzQ3ODI='"
+      - proxy:
+          - action:
+              serviceEndpoint: TMSRestBusinessPathURL
+              changeOrigin: true

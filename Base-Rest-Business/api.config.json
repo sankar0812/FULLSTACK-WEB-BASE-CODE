@@ -1,0 +1,10 @@
+{
+    "tms.api.rest.business.basesetup.basesetup.v1": {
+        "ID": 1,
+        "Name": "ADD BASE SETUP",
+        "Method": "POST",
+        "Endpoint": "/api/rest/tms/business/1.0.0/basesetup/v1/basesetup",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    }
+}

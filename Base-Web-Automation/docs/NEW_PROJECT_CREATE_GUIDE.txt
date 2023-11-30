@@ -1,0 +1,8 @@
+$) Source :
+1) https://www.ideas2it.com/blogs/step-by-step-guide-to-setup-a-comprehensive-playwright-test-automation-framework-using-page-object-model/
+
+-------------------------------------------------------------
+$) Steps to Follow to Create a new Play wright project:
+1) npm init -y
+2) npm i -D @playwright/test
+3) npm install --save-dev playwright

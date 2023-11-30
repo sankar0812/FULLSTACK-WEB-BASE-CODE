@@ -1,0 +1,34 @@
+{
+    "tms.api.rest.dataaccess.user.create.v1": {
+        "ID": 1,
+        "Name": "Create USER",
+        "Method": "POST",
+        "Endpoint": "api/rest/tms/dataaccess/1.0.0/user/v1/user",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "tms.api.rest.dataaccess.user.read.v1": {
+        "ID": 2,
+        "Name": "READ USERS",
+        "Method": "POST",
+        "Endpoint": "api/rest/tms/dataaccess/1.0.0/user/v1/users",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "tms.api.rest.dataaccess.user.readone.v1": {
+        "ID": 3,
+        "Name": "READ ONE USER",
+        "Method": "GET",
+        "Endpoint": "/api/rest/tms/dataaccess/1.0.0/user/v1/user/:userid",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    },
+    "tms.api.rest.dataaccess.user.update.v1": {
+        "ID": 4,
+        "Name": "UPDATE MULTIPLE USER",
+        "Method": "PATCH",
+        "Endpoint": "/api/rest/tms/dataaccess/1.0.0/user/v1/users",
+        "IsAvailable": true,
+        "IsMockEnabled": false
+    }
+}

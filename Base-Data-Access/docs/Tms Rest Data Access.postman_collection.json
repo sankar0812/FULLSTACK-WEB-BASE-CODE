@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "ea66d1e7-b2e7-4042-9164-07224a9c3810",
+		"name": "Tms Rest Data Access",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19896243",
+		"_collection_link": "https://lively-robot-106172.postman.co/workspace/Sample~a8b584e7-d89f-402b-8f99-9c47310b9032/collection/19896243-ea66d1e7-b2e7-4042-9164-07224a9c3810?action=share&source=collection_link&creator=19896243"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create One User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"UserPhoneNumber\": 1234345,\r\n        \"UserName\": \"Sample\",\r\n        \"UserEmail\": \"sample@gove.co\",\r\n        \"CreatedUserID\": 1,\r\n        \"CreatedBy\": \"user1\",\r\n        \"ModifiedUserID\": 1,\r\n        \"ModifiedBy\": \"user1\"\r\n    },\r\n    \"filter\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rest/tms/dataaccess/1.0.0/user/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rest",
+								"tms",
+								"dataaccess",
+								"1.0.0",
+								"user",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {},\r\n    \"fields\": {},\r\n    \"page\": 0,\r\n    \"limit\": 10,\r\n    \"sort\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rest/tms/dataaccess/1.0.0/user/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rest",
+								"tms",
+								"dataaccess",
+								"1.0.0",
+								"user",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read  One User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rest/tms/dataaccess/1.0.0/user/v1/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rest",
+								"tms",
+								"dataaccess",
+								"1.0.0",
+								"user",
+								"v1",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "927NBGJJ0283HKA74782",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "QP0192923232LD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"UserID\": 1\r\n    },\r\n    \"fields\": {\r\n        \"UserPhoneNumber\": 9876543210\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/rest/tms/dataaccess/1.0.0/user/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"rest",
+								"tms",
+								"dataaccess",
+								"1.0.0",
+								"user",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
